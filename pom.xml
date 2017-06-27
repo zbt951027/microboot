@@ -30,11 +30,11 @@
 			<resource>
 				<directory>src/main/resources</directory>
 				<includes>
-					<include>**/*.properties</include>
-					<include>**/*.yml</include>
+					<include>**/*.*</include>
+<!-- 					<include>**/*.yml</include>
 					<include>**/*.xml</include>
 					<include>**/*.tld</include>
-					<include>**/*.html</include>
+					<include>**/*.html</include>  --> 
 				</includes>
 				<filtering>false</filtering>
 			</resource>
@@ -77,5 +77,6 @@
 	<modules>
 		<module>microboot-base</module>
 		<module>microboot-advance</module>
+		<module>microboot-validator</module>
 	</modules>
 </project>
