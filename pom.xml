@@ -31,10 +31,8 @@
 				<directory>src/main/resources</directory>
 				<includes>
 					<include>**/*.*</include>
-<!-- 					<include>**/*.yml</include>
-					<include>**/*.xml</include>
-					<include>**/*.tld</include>
-					<include>**/*.html</include>  --> 
+					<!-- <include>**/*.yml</include> <include>**/*.xml</include> <include>**/*.tld</include> 
+						<include>**/*.html</include> -->
 				</includes>
 				<filtering>false</filtering>
 			</resource>
@@ -47,7 +45,7 @@
 				</includes>
 				<filtering>false</filtering>
 			</resource>
- 		</resources> 
+		</resources>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -72,11 +70,19 @@
 					</execution>
 				</executions>
 			</plugin>
+<!-- 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<warName>micro</warName>
+				</configuration> 
+			</plugin> --> 
 		</plugins>
 	</build>
 	<modules>
 		<module>microboot-base</module>
 		<module>microboot-advance</module>
 		<module>microboot-validator</module>
+		<module>microboot-thymeleaf</module> 
 	</modules>
 </project>

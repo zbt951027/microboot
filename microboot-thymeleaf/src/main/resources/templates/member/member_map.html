@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+<title>Spring Boot</title>
+<link rel="icon" type="image/x-icon" th:href="@{/images/mldn.ico}"/>
+<script type="text/javascript" th:src="@{/js/main.js}"/>  
+</head>
+<body>
+	<table>
+		<tr><td>NO.</td><td>用户编号</td><td>用户姓名</td><td>用户工资</td><td>奇数</td><td>偶数</td></tr>
+		<tr th:each="member, temp:${allMembers}">
+			<td th:text="${temp.index}"/>
+			<td th:text="${member.key}"/>
+			<td th:text="${member.value.name}" />
+			<td th:text="${member.value.salary}" />
+			<td th:text="${temp.odd}" />
+			<td th:text="${temp.even}" />
+		</tr>
+	</table><br/>
+	
+	<p th:text="${#maps.containsKey(allMembers, 'member - 0')}"/>
+	<p th:text="${allMembers['member - 1'].name}"/>
+	
+	
+</body>
+</html>

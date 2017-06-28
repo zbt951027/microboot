@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+<title>Spring Boot</title>
+<link rel="icon" type="image/x-icon" th:href="@{/images/mldn.ico}"/>
+<script type="text/javascript" th:src="@{/js/main.js}"/>  
+</head>
+<body>
+	<p th:text="'用户编号: ' + ${member.mid}"/>	
+	<p th:text="'用户姓名: ' + ${member.name}"/>	
+	<p th:text="'用户年龄: ' + ${member.age}"/>	
+	<p th:text="'用户工资: ' + ${member.salary}"/>	
+	<p th:text="'用户生日: ' + ${member.birthday}"/>	
+	<p th:text="'用户生日: ' + ${#dates.format(member.birthday, 'yyyy-MM-dd')}"/><hr/>
+	
+	<div th:object="${member}">
+		<p th:text="'用户编号: ' + *{mid}"/>	
+		<p th:text="'用户姓名: ' + *{name}"/>	
+		<p th:text="'用户年龄: ' + *{age}"/>	
+		<p th:text="'用户工资: ' + *{salary}"/>	
+		<p th:text="'用户生日: ' + *{birthday}"/>	
+		<p th:text="'用户生日: ' + *{#dates.format(birthday, 'yyyy-MM-dd')}"/><hr/> 
+	</div>
+	
+	<span th:if="${member.mid eq 1}">
+		如果ID为1的话，你才会看见我这句话
+	</span><hr/>
+	
+	<span th:if="${member.name eq 'zhasn'}">
+		我的名字叫 'zhasn'
+	</span><hr/>
+	
+	<span th:switch="${member.mid}">
+		<p th:case="1">用户ID为1</p>
+		<p th:case="2">用户ID为2</p>
+		<p th:case="3">用户ID为3</p>
+		<p th:case="*">用户ID为其他</p>
+	</span>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+<title>Spring Boot</title>
+<link rel="icon" type="image/x-icon" th:href="@{/images/mldn.ico}"/>
+<script type="text/javascript" th:src="@{/js/main.js}"/>  
+</head>
+<body>
+	<p th:utext="'官方网站: ' + ${url}"/>  
+	<p th:text="'用户名: ' + ${mid}"/> <hr/> 
+	
+	<h1 th:text="#{welcome.url}"/>
+	<h1 th:text="#{welcome.msg('haha')}"/>  <hr/>
+	
+	<h2 th:text="'官方网站: ' + #{welcome.url} + ', 数学计算: 1 + 2 = ' + (1 + 2)"/><hr/>
+	
+	<h3 th:text="'requestMsg = ' + ${requestMsg}"/><hr/>
+	<h3 th:text="'sessionMsg = ' + ${session.sessionMsg}"/><hr/>
+	<h3 th:text="'applicationMsg = ' + ${application.applicationMsg}"/><hr/>
+	
+</body>
+</html>
