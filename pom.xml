@@ -87,5 +87,7 @@
 		<module>microboot-thymeleaf</module> 
 		<module>microboot-upload</module> 
 		<module>microboot-mybatis</module> 
+		<module>microboot-rabbitmq-producer</module> 
+		<module>microboot-rabbitmq-consumer</module> 
 	</modules>
 </project>

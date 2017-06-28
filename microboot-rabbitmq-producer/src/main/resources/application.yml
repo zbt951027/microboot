@@ -1,0 +1,10 @@
+server:
+  port: 80  # 设置Tomcat的运行端口
+spring: # 该配置直接被Spring容器来处理
+  messages: # 表示进行资源则配置
+    basename: i18n/Message,i18n/Page  # 资源文件名称
+  rabbitmq:
+    addresses: rabbitmq-server
+    username: mldnjava
+    password: hello
+    virtual-host: / 
