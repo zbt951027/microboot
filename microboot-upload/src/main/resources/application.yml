@@ -1,0 +1,15 @@
+server:
+  port: 80  # 设置Tomcat的运行端口
+
+spring: # 该配置直接被Spring容器来处理
+  messages: # 表示进行资源则配置
+    basename: i18n/Message,i18n/Page  # 资源文件名称
+
+http:
+  multipart:
+    enabled: true # 可以启用http上传
+    max-file-size: 10MB # 设置支持的单个上传文件的大小限制
+    max-request-size: 20MB # 设置最大的请求的文件大小，设置总体大小请求
+    file-size-threshold: 512KB  # 当上传文件达到指定配置量的时候会将文件内容写入磁盘
+    location: / # 设置上传的临时目录
+    

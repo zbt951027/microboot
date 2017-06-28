@@ -42,6 +42,7 @@
 					<include>**/*.properties</include>
 					<include>**/*.xml</include>
 					<include>**/*.tld</include>
+					<include>**/*.sql</include> 
 				</includes>
 				<filtering>false</filtering>
 			</resource>
@@ -84,5 +85,7 @@
 		<module>microboot-advance</module>
 		<module>microboot-validator</module>
 		<module>microboot-thymeleaf</module> 
+		<module>microboot-upload</module> 
+		<module>microboot-mybatis</module> 
 	</modules>
 </project>

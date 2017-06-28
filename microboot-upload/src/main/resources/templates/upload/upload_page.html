@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+<link rel="icon" type="image/x-icon" href="/images/mldn.ico"/>
+<title>Spring Boot</title>
+</head>
+<body>
+	<form th:action="@{/upload}" method="post" enctype="multipart/form-data">
+		姓名 ： <input type="text" name="name" id="name"/><br/>
+		照片 ： <input type="file" name="pic" id="pic"/><br/>
+		<input type="submit" name="subBut" id="subBut" value="提交"/>
+	</form>
+	
+	<a th:href="@{/show(groupFile='group1/M00/00/00/wKhtqFlTsoOAcv9tAAFCUGh1IA8521.png')}">查看照片</a> 
+</body>
+</html>
